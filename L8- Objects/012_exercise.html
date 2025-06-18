@@ -1,0 +1,102 @@
+<!--
+Challenge Exercises
+8i. We’ll improve the coin flip game from exercise4.html from Boolean and if statement folder to be like the rock paper scissors game.
+Copy the code from exercise4.html 
+Create 2 buttons to play the game
+  heads  tails
+
+When clicking ‘heads’ play the game with guess = 'heads'.
+When clicking ‘tails’ play the game with guess = 'tails'.
+Create a function ‘playGame(guess)’ to reuse the code.
+
+8j. Create a score object { wins: 0, losses: 0 }, update the score each time after playing, and display the score in the console.
+
+8k. Use localStorage to save and load the score (hint: you’ll need to use JSON.stringify() to convert the score object to a string).
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coin flip Game
+        </title>
+    </head>
+    <body>
+        <button
+        onclick="
+        guess = 'heads';
+        playGame(guess);
+
+        ">
+            heads
+        </button>
+        <button
+        onclick="
+        guess = 'tails';
+        playGame(guess);
+
+        ">
+            tails
+        </button>
+
+    </body>
+</html>
+
+
+
+<script>
+
+    let guess = '';
+    const score = JSON.parse(localStorage.getItem('backup')) || { win: 0, loses: 0 };
+
+
+    function playGame(guess){
+        const randomNumber = Math.random();  
+        let result = "";
+        if(randomNumber <0.5){  0.3324 < 0.5 
+            result = 'heads';
+        }
+
+        else{
+            result = 'tails';
+        }
+
+        if(guess === result){
+            console.log('You win');
+            score.win = score.win + 1;
+        }
+
+        else{
+            console.log('You lose');
+            score.loses = score.loses + 1;
+
+        }
+        console.log(score);
+//      localStorage.setItem('backup',score);  this is wrong localstorgae only support strings
+        localStorage.setItem('backup', JSON.stringify(score));  // after playing a game and getting a score we have to save it in a localStorage
+    // but we know localStorage only suports strings not object , we have score, stored in a object we first need to convert object into string using JSON to store it back in localStorage 
+
+
+    }
+    console.log('Previous score :',score);
+    
+
+    
+
+</script>
+
+<!--
+Doubt solving : 
+✅ This line:
+const score = JSON.parse(localStorage.getItem('backup')) || { win: 0, loses: 0 };
+
+When localStorage is empty (i.e. no 'backup' key):
+localStorage.getItem('backup') → returns null
+JSON.parse(null) → gives null
+null || { win: 0, loses: 0 } → final result is { win: 0, loses: 0 }
+
+✅ So the score variable stores: this first
+{ win: 0, loses: 0 }
+That is the first value stored in const score when localStorage is empty.
+
+-->

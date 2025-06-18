@@ -1,0 +1,52 @@
+<!--
+9d. Create a text box (<input>) and a submit button. When clicking ‘Submit’, 
+display ‘Your name is: ${text}’ on the page (${text} = the text inside the text box) 
+(hint: use .value to get the text inside an <input>).
+
+9e. Modify exercise 9d so that when you press ‘Enter’ in the <input>, it will also display the same message on the page (hint: use onkeydown and the event object). 
+9f. Continuing from 9e, create a function to reuse the code (if you already did this, skip this exercise).
+
+-->
+
+
+<html>
+    <head>
+        <title>
+            text box
+        </title>
+    </head>
+    <body>
+        <input placeholder="Enter you name" class="input" onkeydown="console.log(event.key)
+        enterKey(event);
+        ">
+
+        <button
+        onclick="
+            submitClick();
+        ">
+        Submit</button>
+
+        <p class="answer">
+        </p>
+    
+    </body>
+</html>
+
+
+
+<script>
+    function submitClick(){
+        const a = document.querySelector('.input').value;
+        document.querySelector('.answer').innerHTML = `Your name is : ${a}`;
+    }
+
+    function enterKey(event){
+        if(event.key === 'Enter'){
+            const a = document.querySelector('.input').value;
+            document.querySelector('.answer').innerHTML = `Your name is : ${a}`;
+        }
+    }
+
+    
+    
+</script>

@@ -1,0 +1,27 @@
+<!--
+Built in JSON object : 
+convert
+Javascript Object -> JSON 
+
+-->
+
+<script>
+
+    const obj1 = {
+        name3: 'Gon',
+        height: 4,
+        obj2: {  // this also can be called a snested objects
+            name4: 'Killua',
+            height1: 4.6
+        },
+        fun: function function1(){  // a function is also a anothe rtype of value in JS
+            console.log('function inside object')
+        }
+    };
+
+    console.log(JSON.stringify(obj1));  // converts javascript object into json object
+    console.log(typeof JSON.stringify(obj1));
+
+    const jsonstring = JSON.stringify(obj1);
+    console.log(JSON.parse(jsonstring));  // converts json into javascript object
+</script>

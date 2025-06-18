@@ -1,0 +1,43 @@
+<!--goto supersimple.dev/projects/arrays we are building todo list practice 1 -->
+
+<!--We learned about arrays in this file 
+an arrays is a another type of values , it represents a list of values-->
+<html>
+    <head>
+        <title>
+            Todo list 1
+        </title>
+        
+    </head>
+    <body>
+        
+        <p>
+            Todo List Practice 1 
+        </p>
+
+        <input placeholder="Todo name"  class="js-input" >
+
+        <button
+        onclick=" 
+        addtodo(); 
+        ">
+            Add
+        </button>
+
+    </body>
+
+    <script>
+
+        const TodoList = [];
+        function addtodo(){
+            const inputElement = document.querySelector('.js-input');
+            const inputValue = inputElement.value;
+            
+            TodoList.push(inputValue);
+            console.log(TodoList);
+
+            inputElement.value = '';  // resets the input after adding element in array
+        }
+
+    </script>
+</html

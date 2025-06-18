@@ -1,0 +1,58 @@
+<!--04-dom-project.html file's problem same project using function
+goto supersimple.dev/projects/dom  
+we learned about classlist.add and classlist.remove -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube Subscribe Button</title>
+    <style>
+
+      body{
+        font-family: Arial;
+      }
+
+      .css-button{
+        color: white;
+        background-color: black;
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer; 
+      }
+
+      .is-subscribed{
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+
+    <button
+      class="js-Subscribe-button css-button"
+      onclick="subscribe();">
+      Subscribe
+    </button>
+
+    <script>
+      function subscribe() {
+        const a = document.querySelector('.js-Subscribe-button');
+        if (a.innerText.trim() === 'Subscribe') {
+          a.innerText = 'Subscribed';
+          a.classList.add('is-subscribed');  // for css , this adds a extra class(tomodify) when button gets subscribed // ie color pan change honar 
+        } else {
+          a.innerText = 'Subscribe';
+          a.classList.remove('is-subscribed'); // this calss is for css , when reclick the button it should remains like previous one
+        }
+      }
+    </script>
+  </body>
+</html

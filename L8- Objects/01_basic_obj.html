@@ -1,0 +1,36 @@
+ <!--we learned about what is object in JS-->
+ <!--What is object :- an object groups multiple values together -->
+
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title> Objects</title>
+    </head>
+    <body>
+        <script>
+            const product = {   // inside an obj we can save any type of values
+                name: 'scoks',  // the left side is called as property(name) and using that property we can access specific values in the object
+                price: 1090  // the left side is called as property(price) 
+            };
+            console.log(product);
+// using the property we can access specific values in the object
+            console.log(product.name);  // just like this 
+
+// we can also use the property to change a value inside an object
+            product.name = 'cotton socks';  // just like this
+            console.log(product);
+
+// we can also add a value to an object 
+            product.newProperty = true;  // just like this 
+            console.log(product);
+
+// we can also remove a value from an object 
+            delete product.newProperty;  // just like this
+            consol.log(product);
+
+            console.log(typeof product);  // it will tell us that the product is a object
+
+        </script>
+
+    </body>
+ </html>

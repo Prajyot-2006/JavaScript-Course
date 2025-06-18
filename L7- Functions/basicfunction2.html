@@ -1,0 +1,45 @@
+<!-- In this file we learned about func and parameters -->
+<title>
+    Function
+</title>
+
+<script>
+
+    // #function1 
+    function addition(x , y){
+        return x + y;
+    }
+
+    const a = addition(3 , 9);
+    console.log(a);
+
+
+
+    // #function2
+    function subtraction(x , y){  // this function results in NAN( not a number)
+        return x - y;
+    }
+
+    const b = subtraction(5);
+    console.log(b)
+
+
+
+    // #function3
+    function subtraction1(x , y = 2){  // deafult parameter  
+        return x - y;
+    }
+
+    const b1 = subtraction1(5 , 3);
+    const b2 = subtraction1(5);
+    console.log(b1)
+    console.log(b2)
+
+
+
+    
+</script>
+
+
+
+

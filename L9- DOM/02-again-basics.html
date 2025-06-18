@@ -1,0 +1,40 @@
+<!--
+In this file we learned aboutr DOM 
+a DOM is another built-in object in JS , called the document object
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DOM
+        </title>
+    </head>
+    <body>
+        <button>
+            hello
+        </button>
+    </body>
+</html>
+
+<script>
+
+    console.log(document.title);
+    document.title = 'Changed';  // the title property is linked to the title of the webpage
+    console.log(document.body);  // we can put HTMl elements inside Javascript  The DOM combines both HTML and JS together
+// when an  html element is inside an JS like this (the above line) , then the HTML element is converted into JavaScript object
+    console.log(typeof document.body);  // object
+    console.log(document.body.innerHTML);  // all the code which i write 
+    document.body.innerHTML = 'Changd';  // all the code which i write changed to a text 'Changed' 
+
+// we can replace this HTMl with new HTML code not just text as shown in below
+    document.body.innerHTML = '<button> Good Job! </button>';  // replaces all the HTML inside the body with this new HTML
+
+
+</script>
+
+
+<!--
+Inshort : 
+The document object represents/models the webpage
+DOM(Document object model) 
+-->

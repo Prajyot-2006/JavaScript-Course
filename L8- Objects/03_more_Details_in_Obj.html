@@ -1,0 +1,58 @@
+ <!--we learned about bracket notation-->
+ <!--bracket notation lets us use the property that dont work with dot notation-->
+
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title> Objects</title>
+    </head>
+    <body>
+        <script>
+            const product2 = {
+                name: 'Tshirt',
+                price: 500
+            };
+
+// we can also acces value in object using another way in JS 
+            console.log(product2.name);
+            console.log(product2['name']);  // it does the same work as shown above
+
+// why we use bracket notation ? the reason is below
+            console.log(product2.deliver-time);  // gives an error bcoz JS thinks we are doing math here after reading - sign
+            console.log(product2['delivery-time']);  // it works fine , and bcoz delivery-time does not exist in the object thats why it will give undefined as a result
+
+// using bracket notation we can aslo add values to the object or create a property 
+            const product3 = {
+                name2: 'sandal',
+                ['delivery-time']: '1 day'
+            };
+
+// inside an obj we can save any type of values as shown in below 
+            const obj1 = {
+                name3: 'Gon',
+                height: 4,
+                obj2: {  // this also can be called a snested objects
+                    name4: 'Killua',
+                    height1: 4.6
+                },
+                fun: function function1(){  // a function is also a anothe rtype of value in JS
+                    console.log('function inside object')
+                }
+            };
+
+            console.log(obj1.obj2.name4);  // we do like this to access the nested object 
+            obj1.fun()  // we do like this to access the function or to call the function which is inside an object 
+        </script>
+    </body>
+ </html>
+
+
+
+
+
+ <!--Use dot notation by default-->
+ <!-- use the bracket notation for the property that dont work with dot notation  -->
+<!--function inside object is called as method-->
+<!--console.log() is an best exammple for function inside object 
+console is a object provided by JS and log is a function 
+also Math.random() : math is an object provided by JS and random is an function-->

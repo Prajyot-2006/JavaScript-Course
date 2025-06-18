@@ -1,0 +1,73 @@
+<!--  goto supersimple.dev/projects/dom
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Youtube Subscribe Button
+        </title>
+    </head>
+    <body>
+        <p>
+            YouTube Subscribe Button
+        </p>
+        <button
+        class="js-Subscribe-button"
+        onclick="
+        const a = document.querySelector('.js-Subscribe-button');  // The button HTML element is stored in variable 'a' as an object. 
+    //  console.log(a);  gets all code of html button's element
+    //  console.log(a.innerHTML);  // gets html button element's all content
+        if(a.innerHTML === 'Subscribe'){
+            a.innerHTML = 'Subscribed';
+        }
+        else{
+            a.innerHTML = 'Subscribe';
+        }
+        ">
+            Subscribe   // but what if we add extra spaces before/after Text Subscribe ? 
+        </button>
+    </body>
+</html>
+
+<script>
+</script
+
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Youtube Subscribe Button
+        </title>
+    </head>
+    <body>
+        <p>
+            YouTube Subscribe Button
+        </p>
+        <button
+        class="js-Subscribe-button"
+        onclick="
+        const a = document.querySelector('.js-Subscribe-button');  // The button HTML element is stored in variable 'a' as an object. 
+    //  console.log(a);  gets all code of html button's element
+    //  console.log(a.innerText);  // gets html button element's only text not all content
+        if(a.innerText === 'Subscribe'){
+            a.innerText = 'Subscribed';
+        }
+        else{
+            a.innerText = 'Subscribe';
+        }
+        ">
+                 Subscribe   
+        </button>
+    </body>
+</html>
+
+<script>
+
+</script>
+
+
+
+

@@ -1,0 +1,51 @@
+<script>
+    console.log('hello'.length);  // js automatica;ly raps the string in a special object that why we are able to use properties like .legth .touppercase in a string
+    console.log('hello'.toUpperCase());  // 'hello' = special objevct
+
+
+    const object1 = {
+        message: 'hello'
+    };
+
+    const object2 = object1;
+
+    object1.message = 'Good Job';
+    console.log(object1);
+
+    console.log(object2);
+
+    const object3 = {
+        message: 'Good Job'
+    };
+    console.log(object1 === object3);  // false   bcoz object 3 is from different reference from object 2 thats why it gives false
+
+    const message = 'hallaw'
+    const object4 = {
+        message: message
+    };
+    console.log(object4);
+</script>
+
+
+<!--
+
+Key Concept: Objects are stored by reference
+When you write:
+const object2 = object1;
+You're not creating a new object — you're just saying:
+“Hey object2, point to the same object that object1 points to.”
+So now both object1 and object2 are pointing to the same object in memory.
+
+Then this happens:
+object1.message = 'Good Job';
+You updated the .message property of the shared object in memory.
+So when you console.log(object2), it also shows the updated message — because it points to the same object!
+
+Output:
+{ message: 'Good Job' }
+{ message: 'Good Job' }
+
+
+console.log(object1 === object3); when we do like like we are actually comparing the references not the values inside 
+
+-->

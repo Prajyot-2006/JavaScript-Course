@@ -1,0 +1,45 @@
+<!--
+9h. Let’s create the project on the right:  open on Yt lesson 9 
+
+Whenever we type in the text box, update the text on the page.
+
+To do this, we’ll learn another event called <input onkeyup="...">.
+
+This runs code after we press a key and release it (key comes up).
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <input placeholder="Type something" class="js-input"
+      onkeyup="  // we also can use onkeydown
+        const inputElement = document.querySelector('.js-input').value;
+        document.querySelector('.js-message').innerHTML = inputElement;
+      ">
+
+    <p class="js-message"></p>
+  </body>
+</html>
+
+<!--
+🔽 onkeydown
+This runs when you press a key down.
+🧠 Think: Key is going down (you push it).
+📌 Example:
+<input onkeydown="console.log('You pressed a key!')">
+
+
+🔼 onkeyup
+This runs when you release the key after pressing.
+🧠 Think: Key goes up (you let go).
+📌 Example:
+<input onkeyup="console.log('You released the key!')">
+
+| Event       | When it happens          |
+| ----------- | ------------------------ |
+| `onkeydown` | As soon as you press     |
+| `onkeyup`   | When you release the key |
+
+-->

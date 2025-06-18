@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Amazon Shipping Project
+        </title>
+    </head>
+    <body>
+        <p>
+            Amazon Shipping Calculator
+        </p>
+
+        <p>Orders under $40 = +$10 shipping.</p>
+        <p>Orders over $40 = FREE shipping.</p>
+
+
+        <input placeholder="Cost of order" class="js-input" onkeydown="handleCostKeyDown(event);"
+        
+        > 
+        <button
+        onclick="
+        calculateTotal();">
+            Calculate
+        </button>
+
+        <p class="js-FinalAmount">
+        </p>
+
+    </body>
+
+    <script>
+        //let inputValue = document.querySelector('.js-input').value;
+
+        function handleCostKeyDown(event){  // got actual event object
+            console.log(event.key);  
+            if(event.key === 'Enter'){
+                calculateTotal();
+            }
+        }
+
+        function calculateTotal(){
+            let inputValue = document.querySelector('.js-input').value;  // .value gives the text inside the textbox
+//          console.log(typeof inputValue); string   whenever we get a value from the DOM, the value will be a string
+            let a = eval(inputValue);
+
+
+            //console.log(inputValue);
+            if(a<40){
+                a = a + 10;
+            }
+            else if(isNaN(a)){
+                a = NaN;
+            }
+            
+            else{
+                a = a;
+            }
+
+            document.querySelector('.js-FinalAmount').innerHTML = `$${a}`;
+
+        }
+
+       // document.querySelector('.js-FinalAmount').innerHTML = inputValue;
+
+    </script>
+</html>

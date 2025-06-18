@@ -1,0 +1,71 @@
+<!--goto supersimple.dev/projects/calculator we are building 1 2 3 + = reset buttoon -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+    </head>
+    <body>
+
+        <button
+        onclick="
+        store = `${store}1`;
+        console.log(store);
+        ">
+            1
+        </button>
+
+
+        <button
+        onclick="
+        store = `${store}2`;
+        console.log(store);
+        ">
+            2
+        </button>
+
+
+        <button
+        onclick="
+        store = `${store}3`;
+        console.log(store);
+        ">
+            3
+        </button>
+
+
+        <button
+        onclick="
+        store = `${store} + `;
+        console.log(store);
+        ">
+            +
+        </button>
+
+
+        <button
+        onclick="
+        store = eval(store);  // converts the string into math or number type      
+        console.log(store);
+        ">
+            =
+        </button>
+
+
+        <button
+        onclick="
+        store = 0;
+        console.log(store);
+        ">
+            Reset
+        </button>
+
+
+    </body>
+
+    <script>
+        let store = "";
+    </script>
+</html>

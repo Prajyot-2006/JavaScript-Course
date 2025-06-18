@@ -1,0 +1,127 @@
+<!--
+7k. Create a copy of the Cart Quantity project from exercise 6l.
+ • Create a function ‘updateCartQuantity’ and reuse the code.
+7l. Modify ‘updateCartQuantity’ so that if the quantity is invalid, alert(); and then return; (this is called an early return). 
+An early return make our code cleaner because we can remove the ‘else-if’ / ‘else’.  // i havent updated this 7l(i think its no need)
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Cart quantity </title>
+    </head>
+    <body>
+        <p>
+            Cart Quantity
+        </p>
+
+        <!--Show Quantity-->
+        <button
+        onclick="console.log(`Cart quantity: ${cartQuantity}`)"
+        > Show Quantity  
+        </button>
+
+        <!--Add to cart-->
+        <button
+        onclick="
+        updateCart(1);
+        ">
+            Add to Cart
+        </button>
+
+        <!-- +2 button -->
+        <button
+        onclick="
+        updateCart(2);
+        ">
+            +2
+        </button>
+
+        <!-- +3 button -->
+        <button
+        onclick="
+        updateCart(3);
+        ">
+            +3
+        </button>
+
+        <!-- +4 button -->
+        <button
+        onclick="
+        updateCart(4);
+        ">
+            +4
+        </button>
+
+        <!-- +5 button -->
+        <button
+        onclick="
+        updateCart(5);
+        ">
+            +5
+        </button>
+
+
+        <!-- -2 button -->
+        <button
+        onclick="
+        updateCart(-2);
+        ">
+            -2
+        </button>
+
+
+        <!-- -3 button -->
+        <button
+        onclick="
+        updateCart(-3);
+        ">
+            -3
+        </button>
+
+
+        <!--Reset button-->
+        <button
+        onclick="
+        console.log('Cart was Reset')
+        cartQuantity = cartQuantity - cartQuantity;
+        console.log(`Cart quantity: ${cartQuantity}`)
+        ">
+            
+            Reset Cart
+        </button>
+
+
+        <!--Remoe from cart button-->
+        <button
+        onclick="
+        cartQuantity--;
+        console.log(`Cart quantity: ${cartQuantity}`)
+        
+        ">
+            Remove from Cart
+        </button>
+
+
+        <script>
+            let cartQuantity = 0;
+
+            function updateCart(change){
+
+                if(cartQuantity + change >= 10){
+                    alert('The cart is full')
+                }
+                else if( (cartQuantity + change) <= 0){
+                    alert('Not enough items in a cart')
+                }
+                else{
+                    cartQuantity = cartQuantity + change;
+                    console.log(`Cart quantity: ${cartQuantity}`)
+                }
+                
+            }
+        </script>
+    </body>
+</html>

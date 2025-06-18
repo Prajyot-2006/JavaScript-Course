@@ -1,0 +1,46 @@
+<!-- In this file we learned about variable behaviour in JS -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> variables </title>
+    </head>
+    <body>
+        <script>
+            let variable1 = 3;
+            console.log(2);
+            console.log(variable1);
+            let calculation = 2 + 3;
+            console.log(calculation);
+            console.log(calculation + 4);
+
+            let message = 'hello';
+            console.log(message);
+
+            variable1 = 6;  // reassigning a variable
+            console.log(variable1);  
+            variable1 = variable1 + 2;
+            console.log(variable1);
+
+            const variable2 = 100;  // also we can create variable like this 
+            console.log(variable2);  // we cant change its value later 
+            variable2 = 200; // gives an error , check through console 
+
+            var variable3 = 99;
+            console.log(variable3);
+            variable3++;
+            console.log(variable3);
+
+            console.log(typeof calculation);
+            console.log(typeof message);
+
+        </script>
+    </body>
+</html>
+
+
+
+<!-- In JS we can create a variable using three ways 
+ 1. let   (can change values later)
+ 2. const   (we cant change its value later)
+ 3. var  (same as let)

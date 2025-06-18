@@ -1,0 +1,43 @@
+<!--
+In this file we learned aboutr DOM 
+a DOM is another built-in object in JS , called the document object
+-->
+
+<html>
+    <head>
+        <title>
+            DOM
+        </title>
+    </head>
+    <body>
+        <button>
+            hello
+        </button>
+    </body>
+</html>
+
+
+
+<script>
+    document.body.innerHTML = 'Hi';  // so this code removes everything on the page and replaces it with the text hello 
+    // (if the webpage doesnt have any content then it wil not work)
+/* 
+document here is the built-in object of JS
+body is the property of document object (we undestand this by seeing dot notation(.))
+body is also an object
+innerHTML is the property of body object (we undestand this by seeing dot notation(.))
+
+document object conrtains propertes like body , title 
+we used = signn to change the innerHTML property to the string hello
+Note : document object and webpage are linked together
+*/
+    document.title = 'Good Job!';  // it changes the title from DOM to Good Job!
+
+</script>
+
+
+<!--
+Inshort : 
+The document object represents/models the webpage
+DOM(Document object model) 
+-->

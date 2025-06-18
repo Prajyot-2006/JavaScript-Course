@@ -1,0 +1,33 @@
+<!-- In this file we learned what is truthy , falsy value  -->
+<!-- Truthy value : It behaves just like true  -->
+<!-- Falsy value : It behaves just like false  -->
+<!-- In JS the list of falsy values are false, 0 , "" , NaN , undefined , null  
+any value that is not on this list are the truthy values-->
+
+<!-- why do we use truthy falsy values we use them only for shortcut purpose  -->
+
+
+
+<title>
+    Truthy falsy 
+</title>
+
+<script>
+    if(5){ // number 5 behaves like boolean value true
+        console.log('true');
+    }
+
+    if(0){ // number 0 behaves like boolean value false
+        console.log('true');
+    }
+
+    let cartQuantity = 7;
+    if(cartQuantity){  // if(7)  which is truthy
+        console.log('cart has products');
+    }
+    else{
+        console.log('cart doesnt have any products')
+    }
+
+
+</script>

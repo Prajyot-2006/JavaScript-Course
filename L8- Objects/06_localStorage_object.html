@@ -1,0 +1,35 @@
+<script>
+    localStorage.setItem('message','hello'); // its syntax is localStorage.setItem('name','value'); localstorage only supports string 
+    const a = localStorage.getItem('message'); // so using localstorage we are able to get the value that we saved earlier even though we refresh the page
+    console.log(a);
+// message is a special variable created in local storage ans its value is set to be hello
+</script>
+
+<!--
+Note : while dry coding the local storage code first dry code get then only do set
+
+🔁 Correct Dry Run Order:
+getItem() is used first → to read any existing data from localStorage.
+Then later setItem() is used → to save new or updated data.
+
+💡 Simple Explanation:
+🔹 getItem():
+Reads what is already saved.
+Used first when the page loads or when you want to get stored values.
+
+🔹 setItem():
+Writes (saves) something new.
+Used after something changes (e.g., after button click or calculation).
+
+let store = localStorage.getItem('calculation')
+
+so in get item at first nothing is saved ? 
+so we can assume in localstorage variable like calculation has a null value inside it ?
+chatgpt answer : ✅ Yes, you're 100% correct.
+✅ Conclusion:
+Yes, when nothing is saved yet, you can assume:
+localStorage.getItem('calculation') === null
+-->
+
+<!--
+Dry run all the localstorage code files to clear doubts (if have any)-->

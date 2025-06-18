@@ -1,0 +1,34 @@
+<!--
+10c. classList has another method, classList.contains('class-name'), which checks if an element has a class.
+• Create a button: <button class="js-button">Test</button>
+• Use document.querySelector() and classList.contains('js-button') to check if this button has the class 'js-button'.
+• console.log() the result.
+-->
+
+<!--
+In this file we learned aboutr DOM 
+a DOM is another built-in object in JS , called the document object
+-->
+
+<html>
+    <head>
+        <title>
+            
+        </title>
+    </head>
+    <body>
+        <button class="js-button">
+            Test
+        </button>
+    </body>
+</html>
+
+
+
+<script>
+    const a = document.querySelector('.js-button');
+    const b = a.classList.contains('js-button');  // true;
+    console.log(b)
+    
+</script>
+

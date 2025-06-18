@@ -1,0 +1,4 @@
+Note : first write html,css code and then write JS code atlast coz website first needs to load its contents
+Note : Load javascript inside an HTML file <script> , onclick=""
+Note after revising basic1.html : code at script tag runs first when loading website 
+code at button tag runs after when we click on the button 

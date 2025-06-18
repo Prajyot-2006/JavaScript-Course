@@ -1,0 +1,47 @@
+<!--
+We are learning about a variable feature which i havent learn or seen 
+-->
+<script>
+
+// ✅ Example 1: Fruit choice
+    let fruit = 'apple' || 'banana';
+    console.log(fruit);  // o/p apple , Why? Because 'apple' is already a value, so JavaScript doesn’t even look at 'banana'
+
+// ✅ Example 2: Empty value
+    let fruit = '' || 'banana';
+    console.log(fruit);  // o/p banana , Why? Because '' is empty, so JavaScript uses the second value 'banana'.
+
+// ✅ Example 3: Null value
+    let fruit = null || 'banana';
+    console.log(fruit);  // o/p banana , Why? Because null means "nothing", so it moves to 'banana'.
+
+    
+/* 🔑 Rule in simple words:
+A || B
+
+If A is not empty, use A.
+If A is empty, null, or false, use B.
+
+*/
+
+
+/* simple doubt clearence
+in example 1 , A is not empty neither B why not use B it also has a value 
+🧠 Rule of || (OR) in JavaScript:
+A || B means:
+Use A if A has any value.
+Only go to B if A is empty, null, false, or 0.
+
+🔍 So in this example:
+let fruit = 'apple' || 'banana';
+'apple' is not empty
+
+So JavaScript says:
+✅ “Yes! I found a value!”
+❌ “No need to look at the second one!”
+So it stops at 'apple' and never uses 'banana'.
+
+*/
+
+</script>
+

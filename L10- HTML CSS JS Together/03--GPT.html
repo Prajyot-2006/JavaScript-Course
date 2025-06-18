@@ -1,0 +1,46 @@
+<!--
+GPT soln of previous question
+-->
+
+<html>
+    <head>
+        <title>
+            amazon button
+        </title>
+        <style>
+            .button {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            width: 90px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            }
+
+            .afterClick {
+            background-color: gray;
+            color: black;
+            } 
+        </style>
+    </head>
+    <body>
+<button class="button" onclick="toggle(this)">Gaming</button>
+<button class="button" onclick="toggle(this)">Music</button>
+<button class="button" onclick="toggle(this)">Tech</button>
+
+    </body>
+</html>
+
+
+
+<script>
+
+  function toggle(element) {
+    element.classList.toggle('afterClick');
+  }
+
+
+</script>
+

@@ -1,0 +1,123 @@
+<!--
+10d. Create the button on the right. When clicking this button, it should turn ON / OFF. Hints:
+When clicking the button, add or remove the class 'is-toggled', and use it to change the styling.
+Use if (classList.contains('is-toggled')) to decide whether to add or remove the 'is-toggled' class.
+
+10e. Continuing from 10d, create 3 buttons that can be turned ON / OFF.
+
+10f. Continuing from 10e, use a function to reuse the code, and separate each language into its own file (if you didn’t do this already).
+-->
+
+<!--
+In this file we learned aboutr DOM 
+a DOM is another built-in object in JS , called the document object
+-->
+
+<html>
+    <head>
+
+        <style>
+            .beforeClickGaming{
+                background-color: black;
+                color: white;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 90px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+
+
+
+            .beforeClickMusic{
+                background-color: black;
+                color: white;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 90px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+
+
+
+            .beforeClickTech{
+                background-color: black;
+                color: white;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 90px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .afterClick{
+                background-color: gray;
+                color: black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <button   class="beforeClickGaming"
+        onclick="
+        toggle('.beforeClickGaming');
+        isON('.beforeClickGaming');
+        ">
+            Gaming
+        </button>
+
+
+        <button  class="beforeClickMusic"
+        onclick="
+        toggle('.beforeClickMusic');
+        isON('.beforeClickMusic');
+        ">
+            Music
+        </button>
+
+
+        <button  class="beforeClickTech"
+        onclick="
+        toggle('.beforeClickTech');
+        isON('.beforeClickTech');
+        ">
+            Tech
+        </button>
+    </body>
+</html>
+
+
+
+<script>
+    function toggle(selector){
+        const c = document.querySelector(selector);
+        if(!c.classList.contains('afterClick')){
+            c.classList.add('afterClick');
+        }
+        else{
+            c.classList.remove('afterClick');
+        } 
+    }
+
+    function isON(){
+        if(c.classList.contains('afterClick')){
+            c.classList.remove('afterClick');
+        }
+    }
+
+
+</script>
+
+

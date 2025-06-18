@@ -1,0 +1,78 @@
+<!--Challenge Exercises
+10g. Modify 10f so that only 1 button can be ON at a time.
+-->
+<!-- Challenge Exercises 10g -->
+<html>
+  <head>
+    <style>
+        
+      .beforeClickGaming,
+      .beforeClickMusic,
+      .beforeClickTech {
+        background-color: black;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 90px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .afterClick {
+        background-color: gray;
+        color: black;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button class="beforeClickGaming" onclick="
+      isON();
+      toggle('.beforeClickGaming');
+    ">
+      Gaming
+    </button>
+
+    <button class="beforeClickMusic" onclick="
+      isON();
+      toggle('.beforeClickMusic');
+    ">
+      Music
+    </button>
+
+    <button class="beforeClickTech" onclick="
+      isON();
+      toggle('.beforeClickTech');
+    ">
+      Tech
+    </button>
+  </body>
+
+  <script>
+    function toggle(selector) {
+      const c = document.querySelector(selector);
+      if (!c.classList.contains('afterClick')) {
+        c.classList.add('afterClick');
+      } else {
+        c.classList.remove('afterClick');
+      }
+    }
+
+    function isON() {
+      const g = document.querySelector('.beforeClickGaming');
+      const m = document.querySelector('.beforeClickMusic');
+      const t = document.querySelector('.beforeClickTech');
+
+      g.classList.remove('afterClick');
+      m.classList.remove('afterClick');
+      t.classList.remove('afterClick');
+    }
+  </script>
+</html>
+
+
+

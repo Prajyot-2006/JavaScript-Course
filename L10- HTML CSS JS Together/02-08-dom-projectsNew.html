@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Amazon Shipping Project
+        </title>
+        <link rel="stylesheet" href="styles/02-08-dom-projectsNew(CSS).css">
+    </head>
+    <body>
+        <p>
+            Amazon Shipping Calculator
+        </p>
+
+        <p>Orders under $40 = +$10 shipping.</p>
+        <p>Orders over $40 = FREE shipping.</p>
+
+
+        <input placeholder="Cost of order" class="js-input" onkeydown="handleCostKeyDown(event);"
+        > 
+        <button
+        onclick="
+        calculateTotal();" class="calcButton">
+            Calculate
+        </button>
+
+        <p class="js-FinalAmount">
+        </p>
+
+    </body>
+
+    <script src="script/02-08-dom-projectsNew(JS).js">  </script>
+</html>

@@ -1,0 +1,134 @@
+<!--
+9i. We’ll improve the Cart Quantity project.
+• Make a copy of exercise 7l (see the solution for 7l if needed).
+• Create a paragraph (<p></p>) to display the quantity.
+• Whenever we update the quantity, display it on the page instead of in the console. Also, display the quantity when page first loads.
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Cart quantity </title>
+    </head>
+    <body>
+        
+
+        <!--Show Quantity-->
+        <button
+        onclick="//console.log(`Cart quantity: ${cartQuantity}`)
+        document.querySelector('.js-CartProcess').innerHTML = `Cart quantity: ${cartQuantity}`
+        "
+        > Show Quantity  
+        </button>
+
+        <!--Add to cart-->
+        <button
+        onclick="
+        updateCart(1);
+        ">
+            Add to Cart
+        </button>
+
+        <!-- +2 button -->
+        <button
+        onclick="
+        updateCart(2);
+        ">
+            +2
+        </button>
+
+        <!-- +3 button -->
+        <button
+        onclick="
+        updateCart(3);
+        ">
+            +3
+        </button>
+
+        <!-- +4 button -->
+        <button
+        onclick="
+        updateCart(4);
+        ">
+            +4
+        </button>
+
+        <!-- +5 button -->
+        <button
+        onclick="
+        updateCart(5);
+        ">
+            +5
+        </button>
+
+
+        <!-- -2 button -->
+        <button
+        onclick="
+        updateCart(-2);
+        ">
+            -2
+        </button>
+
+
+        <!-- -3 button -->
+        <button
+        onclick="
+        updateCart(-3);
+        ">
+            -3
+        </button>
+
+
+        <!--Reset button-->
+        <button
+        onclick="
+        console.log('Cart was Reset')
+        cartQuantity = cartQuantity - cartQuantity;
+        document.querySelector('.js-CartProcess').innerHTML = `Cart quantity: ${cartQuantity}`
+        //console.log(`Cart quantity: ${cartQuantity}`)
+
+        ">
+            
+            Reset Cart
+        </button>
+
+
+        <!--Remove from cart button-->
+        <button
+        onclick="
+        if(cartQuantity > 0){
+            cartQuantity--;
+            document.querySelector('.js-CartProcess').innerHTML = `Cart quantity: ${cartQuantity}`
+        }
+        ">
+            Remove from Cart
+        </button>
+
+        <p class="js-CartProcess">
+        </p>
+
+
+        <script>
+            let cartQuantity = 0;
+
+            function updateCart(change){
+
+                if(cartQuantity + change >= 10){
+                    alert('The cart is full')
+                }
+                else if( (cartQuantity + change) <= 0){
+                    alert('Not enough items in a cart')
+                }
+                else{
+                    cartQuantity = cartQuantity + change;
+                    document.querySelector('.js-CartProcess').innerHTML = `Cart quantity: ${cartQuantity}`
+                   // console.log(`Cart quantity: ${cartQuantity}`)
+                }
+                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!--
+DOM combines HTML ansd JS together It gives JS full control of the webpage
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DOM
+        </title>
+    </head>
+    <body>
+        <button>
+            hello
+        </button>
+
+        <button class="js-button">
+            Second button
+        </button>
+    </body>
+</html>
+
+<script>
+
+    console.log(document.querySelector('button'));  // this string tells js which html element to get from the page
+// this will get 1st button element from the page and put it inside our JS
+// when an html element is inside js its just a js object , so this button element is also just an object and it has properties(like innerHTML) and methods which we can use
+    console.log(document.querySelector('button').innerHTML);  // this will give us html inside the element
+// NOTE :  every html element has a property .innerHTMl which lets us control the html inside the element
+
+    document.querySelector('button').innerHTML = 'Good bye!';
+
+// for 2 buttons ? do like this 
+//  document.querySelector('.js-button')
+    console.log(document.querySelector('.js-button'));   // create a class attribute
+    console.log(document.querySelector('.js-button').innerHTML); 
+
+</script>
+
+
+<!--
+Inshort : 
+The document object represents/models the webpage
+DOM(Document object model) 
+-->

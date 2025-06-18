@@ -1,0 +1,88 @@
+<!--
+7j. Create a copy of the Calculator project from exercise 5r (if you didn’t do 5r, copy the code for 5r from the solutions).
+  • Notice there’s a lot of duplicated code in the buttons.
+  • Create a function ‘updateCalculation’ and reuse the code.
+-->
+
+<!--goto supersimple.dev/projects/calculator we are building 1 2 3 + = reset buttoon -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+    </head>
+    <body>
+
+        <button
+        onclick="
+        updateCalc('1');
+        ">
+            1
+        </button>
+
+
+        <button
+        onclick="
+        updateCalc('2');
+        ">
+            2
+        </button>
+
+
+        <button
+        onclick="
+        updateCalc('3');
+        ">
+            3
+        </button>
+
+
+        <button
+        onclick="
+        updateCalc('+');
+        ">
+            +
+        </button>
+
+
+        <button
+        onclick="
+        converting();
+        ">
+            =
+        </button>
+
+
+        <button
+        onclick="
+        reset();
+        ">
+            Reset
+        </button>
+
+
+    </body>
+
+    <script>
+        let store = "";
+
+        function updateCalc(store1){
+            store = `${store}${store1}`;
+            console.log(store);
+        }
+
+        function converting(){
+            store = eval(store);  // converts the string into math or number type      
+            console.log(store);
+        }
+
+        function reset(){
+            store = "";
+            console.log('Cleared');
+        }
+
+        
+    </script>
+</html>

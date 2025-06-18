@@ -1,0 +1,37 @@
+<!--We learned about arrays in this file 
+an arrays is a another type of values , it represents a list of values-->
+<html>
+    <head>
+        <title>
+            Basic Array and Loops
+        </title>
+        
+    </head>
+    <body>
+        
+
+    </body>
+
+    <script>
+        const myArray = [10,20,30];
+        console.log(myArray);
+
+        console.log(myArray[0]);
+        myArray[0] = 15;
+        console.log(myArray);
+
+        const yourArray = [1 , 'hello' , true , {name: 'prajyot'} , [1,2,3]];
+        console.log(yourArray);
+        console.log(yourArray.length);
+        
+        console.log(typeof yourArray);  // array is just a type of object  so it also has properties and method to use
+
+        myArray.push(100);  // this wil push 100 to the end of myarray
+        console.log(myArray);
+
+        myArray.splice(0 , 1);   // this removes a value from an array  (1. index we want to remove , 2. number of values to remove)  
+        console.log(myArray);
+        myArray.splice(1 , 2);
+        console.log(myArray);
+    </script>
+</html

@@ -1,0 +1,39 @@
+<!--
+We’ll create a coin-flip game (create 1 HTML file for exercises 6f - 6j):
+
+6f. Generate a random number with Math.random(). Save it in a variable.
+
+6g. Create an if-statement and check:
+
+If the number is less than 0.5, then display ‘heads’ in the console.
+Else display ‘tails’ in the console.
+
+6h. Instead of displaying ‘heads’ or ‘tails’ in the console, save the result in a variable called ‘result’.
+
+6i. Let’s say we’re trying to guess the result. Create a variable called ‘guess’ and save your guess (‘heads’ or ‘tails’).
+
+If your guess matches the result, display ‘You win!’ in the console
+If your guess does not match the result, display ‘You lose!’
+-->
+
+<script>
+    const randomNumber = Math.random();
+    let result = "";
+    if(randomNumber <0.5){
+        result = 'heads';
+    }
+    else{
+        result = 'tails';
+    }
+
+    const guess = 'tails';
+
+    if(guess === result){
+        console.log('You win');
+    }
+
+    else{
+        console.log('You lose');
+    }
+
+</script>

@@ -1,0 +1,42 @@
+<!-- 
+ Challenge Exercises
+Setup: create a new file 4i.html for exercises 4i and 4j.
+
+4i. Using HTML and CSS, try to copy the design on the right.
+(Make sure to follow the HTML structure.)
+
+4j. Continuing from 4i, add onclick="..." attributes to the two buttons:
+
+When clicking ‘Add to cart’, create a popup with the text ‘Added’.
+When clicking ‘Buy now’, display the message ‘Loading…’ in the Console, and then create a popup with the text ‘Purchased’.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Web page
+        </title>
+        <style>
+            .yellow-button{
+                background-color: yellow;
+                color: black;
+            }
+
+            .orange-button{
+                background-color: orange;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Adults Plain Cotton Tshirt
+        </p>
+        <p>
+            Price: $7.99
+        </p>
+        <button class="yellow-button" onclick="alert('Added')">Add to cart</button>
+        <button class="orange-button" onclick=" console.log('Loading...');  alert('Purchased'); ">Buy Now </button>
+    </body>
+</html>
