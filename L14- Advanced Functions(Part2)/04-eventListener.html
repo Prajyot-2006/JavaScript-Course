@@ -1,0 +1,41 @@
+<!--In JavaScript, addEventListener is used to listen for user actions (called events) like clicking a button, typing in a text box, moving the mouse, etc., and then run a function when that action happens.
+addEventListener('event',parameter)  // syntax for it
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Listener
+        </title>
+    </head>
+    <body>
+        <button onclick=""  class="js-button">
+            Click Me
+        </button>
+    </body>
+</html>
+
+<script>
+    const buttonElement = document.querySelector('.js-button');
+    const eventlistener = ()=>{   
+        console.log('click3');
+    }
+
+    buttonElement.addEventListener('click' , ()=>{
+        console.log('click');
+    })
+
+    buttonElement.addEventListener('click' , ()=>{   // addeventlistener lets us adds multiple  listener to one event
+        console.log('click2');
+    })
+
+    buttonElement.addEventListener('click' , eventlistener)
+    // we can remove an event listener : removeEventListener()
+    buttonElement.removeEventListener('click' , eventlistener)  // we cant use the exact copy of the function paramter ,we first need to put the paramter into a variable
+
+
+</script>
+
+<!--Best practice : Use .addeventlistener instead of onclick -->
+

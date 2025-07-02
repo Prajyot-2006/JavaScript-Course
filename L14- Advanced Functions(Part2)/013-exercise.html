@@ -1,0 +1,61 @@
+<!--12r. Make a copy of the Rock Paper Scissors game into the files 12r.html, 12r.css, and 12r.js.
+• Update the <link> and <script> elements to load 12r.css and 12r.js.
+• Also, make a copy of the images and make sure they load properly.
+
+12s. Update the ‘Auto Play’ button to use .addEventListener('click', …) instead of onclick="…".
+12t. Update the ‘Auto Play’ button so that when the game is auto playing, the text in the button is ‘Stop Playing’. Otherwise, the text in the button is ‘Auto Play’.
+12u. Update the code so pressing ‘a’ on keyboard will auto play the game.
+12v. Update the ‘Reset Score’ button to use .addEventListener('click', …)
+12w. Update the code so pressing ‘Backspace’ will reset the score.
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/04-rock-paper-scissors(CSS).css"  >
+  </head>
+  <body>
+
+    <p class="para1">Rock Paper Scissors</p>
+
+    <button class="img-button  js-rock-button"  
+    ><img class="sameimg" src="rock-emoji.png"></button>
+
+    <button class="img-button  js-paper-button"
+    ><img class="sameimg" src="paper-emoji.png"></button>
+
+    <button class="img-button  js-scissors-button"
+    ><img class="sameimg" src="scissors-emoji.png"></button>
+
+
+
+    <p class="js-result" >
+    </p>
+
+    <p class="js-move">
+    </p>
+
+    <p class="js-score"> 
+    </p>
+
+    <button class="resetbutton js-reset"
+>
+        Reset Score
+    </button>
+
+    <button class="auto-play js-AutoPlay-button"
+    >
+      Auto Play
+    </button>
+ 
+<!--
+1. score obj la JSON madhe convert kela using stringify 
+2. json obj la JS obj madhe convert kela using parse
+-->
+    <script src="script/07-RPS-exercise(JS).js"></script>  
+  </body>
+</html>
+
+<!--do for reset and autoplay button-->

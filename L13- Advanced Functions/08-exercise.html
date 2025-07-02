@@ -1,0 +1,29 @@
+<!--
+12d. Continuing from exercise 12c, modify the button so that when we click it, the text immediately changes to 'Loading...', and then after 1 second, it changes to 'Finished!'.
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge exercise</title>
+  </head>
+  <body>
+    <button
+      class="start-button"
+      onclick="buttonChanges();">
+      Start
+    </button>
+
+    <script>
+      function buttonChanges() {
+        const button = document.querySelector('.start-button');
+        button.textContent = 'Loading...';
+
+        setTimeout(function () {
+          button.textContent = 'Finished!';
+        }, 1000); // after 1 second
+      }
+    </script>  
+  </body>
+</html>

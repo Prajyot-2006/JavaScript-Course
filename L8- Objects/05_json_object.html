@@ -10,7 +10,7 @@ Javascript Object -> JSON
     const obj1 = {
         name3: 'Gon',
         height: 4,
-        obj2: {  // this also can be called a snested objects
+        obj2: {  // this also can be called as nested objects
             name4: 'Killua',
             height1: 4.6
         },
@@ -20,7 +20,7 @@ Javascript Object -> JSON
     };
 
     console.log(JSON.stringify(obj1));  // converts javascript object into json object
-    console.log(typeof JSON.stringify(obj1));
+    console.log(typeof JSON.stringify(obj1));  // string
 
     const jsonstring = JSON.stringify(obj1);
     console.log(JSON.parse(jsonstring));  // converts json into javascript object
