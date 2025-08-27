@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Function</title>
+  </head>
+  <body>
+    <h1 class="js-addition"></h1>
+    <h1 class="js-subtraction"></h1>
+    <h2 class="js-multiplication"></h2>
+    <h2 class="js-division"></h2>
+
+    <script>
+
+        const a = Number(prompt('Enter a 1st number : '));
+        const b = Number(prompt('Enter a 2nd number : '));
+
+        function add() {
+            return `The Addition is : ${a + b}`;
+        }
+
+        function sub() {
+            return `The Subtraction is : ${a - b}`;
+        }
+        
+        const mul = () => `The Multiplication is : ${a * b}`;  // if u are using curly bracket method in arrow function then u must use return statememt or it will not work 
+        const div = () => `The Division is : ${a / b}`;
+
+
+        document.querySelector('.js-addition').innerHTML = add();
+        document.querySelector('.js-subtraction').innerHTML = sub();
+        document.querySelector('.js-multiplication').innerHTML = mul();
+        document.querySelector('.js-division').innerHTML = div();
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
